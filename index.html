@@ -27,6 +27,12 @@
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
+
+        footer {
+            background-color: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -38,5 +44,22 @@
         <img class="bear-img" src="https://placebear.com/800/603" alt="Cute bear 4">
         <img class="bear-img" src="https://placebear.com/800/604" alt="Cute bear 5">
     </div>
+    
+    <footer>
+        <p id="datetime"></p>
+    </footer>
+    <script>
+        function updateDateTime() {
+            var now = new Date();
+            var datetimeElement = document.getElementById('datetime');
+            datetimeElement.innerHTML = 'Current date and time: ' + now.toLocaleString();
+        }
+
+        // Update date and time every second
+        setInterval(updateDateTime, 1000);
+
+        // Initial call to display date and time immediately
+        updateDateTime();
+    </script>
 </body>
 </html>
